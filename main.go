@@ -53,7 +53,7 @@ func main() {
 	Change := fmt.Sprintf("%s\u202e\ufeff%s%s", Name, Ext_Spoof, Ext)
 
 	//Cambia el nombre del archivo aplicando el cambio con RTLO
-	os.Rename(file, Change)
+	os.Rename(file, filepath.Dir(file)+"\\"+Change)
 }
 
 func Reverse(s string) (f string) {
